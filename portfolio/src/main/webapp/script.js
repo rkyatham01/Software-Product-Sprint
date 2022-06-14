@@ -31,7 +31,5 @@ async function loadingcontent() {
     const textFromResponse = await responseFromServer.text();
     const textdisplayed = textFromResponse[Math.floor(Math.random() * greetings.length)];
     const dateContainer = document.getElementById('date-container');
-    console.log(textdisplayed);
-    console.log(textFromResponse);
     dateContainer.innerText = textdisplayed;
   }
