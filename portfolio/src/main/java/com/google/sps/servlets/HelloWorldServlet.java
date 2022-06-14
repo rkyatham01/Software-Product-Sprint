@@ -21,5 +21,6 @@ public class HelloWorldServlet extends HttpServlet {
     Gson gson = new Gson();
     String result = gson.toJson(messages);
     response.getWriter().println(result);
+    
  }
 }
