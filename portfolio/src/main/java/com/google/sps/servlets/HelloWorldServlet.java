@@ -15,7 +15,7 @@ public class HelloWorldServlet extends HttpServlet {
   @Override
 
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;"); 
+    response.setContentType("application/json;"); 
     String[] messages = {"Hey whats sup", "This is a test message", "Keep this in mind"};
     // response.getWriter().println("<h1>Hello Rishith Kyatham!</h1>");
     Gson gson = new Gson();

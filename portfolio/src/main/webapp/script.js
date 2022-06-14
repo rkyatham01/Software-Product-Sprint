@@ -21,7 +21,6 @@ function addRandomGreeting() {
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
@@ -33,12 +32,4 @@ async function loadingcontent() {
   
     const dateContainer = document.getElementById('date-container');
     dateContainer.innerText = textFromResponse;
-  }
-
-  async function fetchGreeting(){
-    const responseFromtheServer = await fetch('/hello');
-    const greet = await responseFromtheServer.json();
-    const greetings = greetings[Math.floor(Math.random() * greetings.length)];
-    const greetTheContainer = document.getElementById('date-container');
-    greetTheContainer.innerText = greetings;
   }
