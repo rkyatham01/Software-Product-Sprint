@@ -33,7 +33,7 @@ async function loadingcontent() {
     console.log(result);
     let resulttwo = result.split(',');
     console.log(resulttwo);
-    const returnedstring = result[Math.floor(Math.random() * result.length)];
+    const returnedstring = resulttwo[Math.floor(Math.random() * resulttwo.length)];
     const dateContainer = document.getElementById('elementcontainer');
     elementcontainer.innerText = returnedstring;
   }
