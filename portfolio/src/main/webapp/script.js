@@ -29,8 +29,10 @@ function addRandomGreeting() {
 async function loadingcontent() {
     const responseFromServer = await fetch('/hello');
     const textdisplayed = await responseFromServer.text();
-    let result = (textdisplayed.substring(1, textdisplayed.length-1)).split(',')
+    let result = (textdisplayed.slice(1, textdisplayed.length-1));
     console.log(result);
+    let resulttwo = result.split(',');
+    console.log(resulttwo);
     const returnedstring = result[Math.floor(Math.random() * result.length)];
     const dateContainer = document.getElementById('elementcontainer');
     elementcontainer.innerText = returnedstring;
