@@ -16,11 +16,11 @@ public class HelloWorldServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("application/json;"); 
-    //String[] messages = {"Hey whats sup", "This is a test message", "Keep this in mind"};
-    response.getWriter().println("<h1>Hello Rishith Kyatham!</h1>");
-    //Gson gson = new Gson();
-    //String result = gson.toJson(messages);
-    //response.getWriter().println(result);
+    String[] messages = {"Hey whats sup", "This is a test message", "Keep this in mind"};
+    //response.getWriter().println("<h1>Hello Rishith Kyatham!</h1>");
+    Gson gson = new Gson();
+    String result = gson.toJson(messages);
+    response.getWriter().println(result);
     
  }
 }
