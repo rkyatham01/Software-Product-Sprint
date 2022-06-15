@@ -28,7 +28,8 @@ function addRandomGreeting() {
 
 async function loadingcontent() {
     const responseFromServer = await fetch('/hello');
+    const textdisplayed = await responseFromServer.text();
     //const textdisplayed = responseFromServer[Math.floor(Math.random() * responseFromServer.length)];
     const dateContainer = document.getElementById('elementcontainer');
-    elementcontainer.innerText = responseFromServer;
+    elementcontainer.innerText = textdisplayed;
   }
