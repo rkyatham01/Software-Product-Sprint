@@ -30,11 +30,8 @@ async function loadingcontent() {
     const responseFromServer = await fetch('/hello');
     const textdisplayed = await responseFromServer.text();
     let result = (textdisplayed.slice(1, textdisplayed.length-2));
-    console.log(result);
-    let resulttwo = result.split(',');
-    const returnedstring = resulttwo[Math.floor(Math.random() * resulttwo.length)];
-    console.log(returnedstring);
-
+    let splitresult = result.split(',');
+    const returnedstring = splitresult[Math.floor(Math.random() * splitresult.length)];
     const dateContainer = document.getElementById('elementcontainer');
     elementcontainer.innerText = returnedstring;
   }
