@@ -14,11 +14,11 @@ public class FormHandlerServlet extends HttpServlet {
 
     // Get the value entered in the form.
     String textValue = request.getParameter("text-input");
-
     // Print the value so you can see it in the server logs.
     System.out.println("You submitted: " + textValue);
-
     // Write the value to the response so the user can see it.
     response.getWriter().println("You submitted: " + textValue);
+    //Next line is for redirecting a user after the user submits the message
+    response.sendRedirect("https://rkyatham-sps-summer22.uc.r.appspot.com/");
   }
 }
