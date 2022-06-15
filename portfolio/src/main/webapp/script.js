@@ -29,11 +29,12 @@ function addRandomGreeting() {
 async function loadingcontent() {
     const responseFromServer = await fetch('/hello');
     const textdisplayed = await responseFromServer.text();
-    let result = (textdisplayed.slice(1, textdisplayed.length-1));
+    let result = (textdisplayed.slice(1, textdisplayed.length-2));
     console.log(result);
     let resulttwo = result.split(',');
-    console.log(resulttwo);
     const returnedstring = resulttwo[Math.floor(Math.random() * resulttwo.length)];
+    console.log(returnedstring);
+
     const dateContainer = document.getElementById('elementcontainer');
     elementcontainer.innerText = returnedstring;
   }
