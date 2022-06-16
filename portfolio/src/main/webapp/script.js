@@ -28,10 +28,11 @@ function addRandomGreeting() {
 
 async function loadingContentOfUserInput() {
     const serverResponse  = await fetch('/hello');
-    const textdisplayed = await serverResponse .text();
-    let result = (textdisplayed.slice(1, textdisplayed.length-2));
-    let splitresult = result.split(',');
-    const returnedstring = splitresult[Math.floor(Math.random() * splitresult.length)];
+    //const textdisplayed = await serverResponse .text();
+    //let result = (textdisplayed.slice(1, textdisplayed.length-2));
+    //let splitresult = result.split(',');
+    const textdisplayed = await serverResponse.json();
+    const returnedstring = textdisplayed[Math.floor(Math.random() * textdisplayed.length)];
     const inputteduserinfo = document.getElementById('element-container');
     inputteduserinfo.innerText = returnedstring;
   }
