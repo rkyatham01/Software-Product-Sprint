@@ -26,12 +26,12 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-async function loadingcontent() {
-    const responseFromServer = await fetch('/hello');
-    const textdisplayed = await responseFromServer.text();
+async function loadingContentOfUserInput() {
+    const serverResponse  = await fetch('/hello');
+    const textdisplayed = await serverResponse .text();
     let result = (textdisplayed.slice(1, textdisplayed.length-2));
     let splitresult = result.split(',');
     const returnedstring = splitresult[Math.floor(Math.random() * splitresult.length)];
-    const dateContainer = document.getElementById('elementcontainer');
-    elementcontainer.innerText = returnedstring;
+    const inputteduserinfo = document.getElementById('element-container');
+    inputteduserinfo.innerText = returnedstring;
   }
