@@ -1,5 +1,6 @@
 package com.google.sps.servlets;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,12 @@ public class HelloWorldServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
-  }
+    response.setContentType("application/json;"); 
+    String[] messages = {"Hey whats sup", "This is a test message", "Keep this in mind"};
+    Gson gson = new Gson();
+    String result = gson.toJson(messages);
+    response.getWriter().println(result); 
+ }
+
+ 
 }

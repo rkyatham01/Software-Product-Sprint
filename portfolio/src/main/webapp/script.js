@@ -21,8 +21,15 @@ function addRandomGreeting() {
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function loadingContentOfUserInput() {
+    const serverResponse  = await fetch('/hello');
+    const textDisplayed = await serverResponse.json();
+    const returnedString = textDisplayed[Math.floor(Math.random() * textDisplayed.length)];
+    const inputtedUserInfo = document.getElementById('element-container');
+    inputtedUserInfo.innerText = returnedString;
+  }
