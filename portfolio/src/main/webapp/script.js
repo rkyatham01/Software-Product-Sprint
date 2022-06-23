@@ -44,7 +44,8 @@ function drawChart() {
         data.addRows([
             ['Amazon', 108],
             ['Google', 54],
-            ['Facebook', 165]
+            ['Facebook', 165],
+            ['Microsoft', 253],
         ]);
             // ['Amazon', 108],
             // ['Google', 2,229],
