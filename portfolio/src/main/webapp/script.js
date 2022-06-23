@@ -56,19 +56,20 @@ async function loadingContentOfUserInput() {
       }
   };
 
+  const init = () => {
+    pieChart.chart  = new google.visualization.PieChart(
+      document.querySelector(pieChart.element)
+    );
+    pieChart.chart.draw(
+      google.visualization.arrayToDataTable(pieChart.data),
+       pieChart.options
+    );
+ };
+
   google.charts.load('current', {
     packages: ['corechart'],
     callback: init
   });
 
-  const init = () => {
-      pieChart.chart  = new google.visualization.PieChart(
-        document.querySelector(pieChart.element)
-      );
-      pieChart.chart.draw(
-        google.visualization.arrayToDataTable(pieChart.data),
-         pieChart.options
-      );
-  };
 
 
