@@ -42,9 +42,14 @@ function drawChart() {
   data.addColumn('string', 'Stock');
   data.addColumn('number', 'Price');
         data.addRows([
-            ['Lions', 10],
-            ['Tigers', 5],
-            ['Bears', 15]
+            ['Amazon', 108],
+            ['Google', 2,229],
+            ['Facebook', 155],
+            ['Microsoft', 253],
+ //           ['Goldman Sachs', 284.54],
+  //          ['Tesla Inc', 708.26],
+  //          ['Walmart', 120.69],
+   //         ['Target', 140.81]
         ]);
 
   const options = {
