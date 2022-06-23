@@ -42,19 +42,16 @@ function drawChart() {
   data.addColumn('string', 'Stock');
   data.addColumn('number', 'Price');
         data.addRows([
-            ['Amazon', 108],
-            ['Google', 54],
-            ['Facebook', 165],
-            ['Microsoft', 253],
+          ['Amazon', 108.95],
+          ['Google', 2,229.50],
+          ['Facebook', 155.85],
+          ['Microsoft', 253.13],
+          ['Goldman Sachs', 284.54],
+          ['Tesla Inc', 708.26],
+          ['Walmart', 120.69],
+          ['Target', 140.81]
         ]);
-            // ['Amazon', 108],
-            // ['Google', 2,229],
-            // ['Facebook', 155.85],
-            // ['Microsoft', 253.13],
-            // ['Goldman Sachs', 284.54],
-            // ['Tesla Inc', 708.26],
-            // ['Walmart', 120.69],
-            // ['Target', 140.81]
+
   const options = {
     'title': 'Stock Prices',
     'width':450,
