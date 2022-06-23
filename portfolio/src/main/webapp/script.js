@@ -56,6 +56,11 @@ async function loadingContentOfUserInput() {
       }
   };
 
+  google.charts.load('current', {
+    packages: ['corechart'],
+    callback: init
+  });
+
   const init = () => {
       pieChart.chart  = new google.visualization.PieChart(
         document.querySelector(pieChart.element)
@@ -66,8 +71,4 @@ async function loadingContentOfUserInput() {
       );
   };
 
-  google.charts.load('current', {
-      packages: ['corechart'],
-      callback: init
-  });
 
