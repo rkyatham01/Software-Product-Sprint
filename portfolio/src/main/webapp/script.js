@@ -43,7 +43,7 @@ function drawChart() {
   data.addColumn('number', 'Price');
         data.addRows([
           ['Amazon', 108.95],
-          ['Google', 2,229.50],
+          ['Google', 2229.50],
           ['Facebook', 155.85],
           ['Microsoft', 253.13],
           ['Goldman Sachs', 284.54],
