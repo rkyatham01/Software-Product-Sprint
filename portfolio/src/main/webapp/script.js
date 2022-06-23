@@ -33,3 +33,40 @@ async function loadingContentOfUserInput() {
     const inputtedUserInfo = document.getElementById('element-container');
     inputtedUserInfo.innerText = returnedString;
   }
+  //Creating the pieChart Element here
+  const pieChart = {
+      chart: null,
+      data: [
+          ['Stock', 'Prices'], //The schema
+          ['Amazon', 108.95],
+          ['Google', 2,229.75],
+          ['Facebook', 155.85],
+          ['Microsoft', 253.13],
+          ['Goldman Sachs', 284.54],
+          ['Tesla Inc', 708.26],
+          ['Walmart', 120.69],
+          ['Target', 140.81]
+      ],
+      element: '#pie-chart', //for the id tag in html
+      options :{
+        title: "Company Stock Prices",
+        width: 450, 
+        height: 450
+      }
+  };
+
+  const init = () => {
+      pieChart.chart  = new google.visualization.PieChart(
+          document.querySelector(pieChart.element)
+      );
+      pieChart.chart.draw(
+        google.visualization.arrayToDataTable(pieChart.data),
+        pieChart.options
+      );
+  };
+
+  google.charts.load('current', {
+      packages: ['corechart'],
+      callback: init
+  });
+
