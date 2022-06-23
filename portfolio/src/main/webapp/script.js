@@ -36,6 +36,7 @@ async function loadingContentOfUserInput() {
   //Creating the pieChart Element here
   const pieChart = {
       chart: null,
+      //Creating the data set
       data: [
           ['Stock', 'Prices'], //The schema
           ['Amazon', 108.95],
@@ -48,7 +49,7 @@ async function loadingContentOfUserInput() {
           ['Target', 140.81]
       ],
       element: '#pie-chart', //for the id tag in html
-      options :{
+      options : {
         title: "Company Stock Prices",
         width: 450, 
         height: 450
@@ -57,11 +58,11 @@ async function loadingContentOfUserInput() {
 
   const init = () => {
       pieChart.chart  = new google.visualization.PieChart(
-          document.querySelector(pieChart.element)
+        document.querySelector(pieChart.element)
       );
       pieChart.chart.draw(
         google.visualization.arrayToDataTable(pieChart.data),
-        pieChart.options
+         pieChart.options
       );
   };
 
