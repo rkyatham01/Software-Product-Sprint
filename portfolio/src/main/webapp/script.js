@@ -33,3 +33,34 @@ async function loadingContentOfUserInput() {
     const inputtedUserInfo = document.getElementById('element-container');
     inputtedUserInfo.innerText = returnedString;
   }
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);  
+
+// Creates a chart and adds it to the page. 
+function drawChart() {
+  const data = new google.visualization.DataTable();
+  data.addColumn('string', 'Stock');
+  data.addColumn('number', 'Price');
+        data.addRows([
+          ['Amazon', 108.95],
+          ['Google', 2229.50],
+          ['Facebook', 155.85],
+          ['Microsoft', 253.13],
+          ['Goldman Sachs', 284.54],
+          ['Tesla Inc', 708.26],
+          ['Walmart', 120.69],
+          ['Target', 140.81]
+        ]);
+
+  const options = {
+    'title': 'Stock Prices',
+    'width':450,
+    'height':450
+  };
+
+  const chart = new google.visualization.PieChart(
+      document.getElementById('stock-chart'));
+  chart.draw(data, options);
+}
+
+
